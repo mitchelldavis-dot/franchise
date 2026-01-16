@@ -1,0 +1,74 @@
+# Boutique Fitness Franchise Configuration
+# Specialized for yoga, pilates, cycling, HIIT studios
+
+version: "1.0"
+name: "boutique_fitness"
+description: "Configuration for boutique fitness studio franchise leads"
+
+# Inherits from general_gym_franchise but with specialized keywords
+
+geography:
+  florida_only_mode: true
+  florida_score_boost: 5
+  florida_lead_threshold: 50
+
+sources:
+  enabled:
+    - reddit
+    - rss
+    - youtube
+    - manual_import
+
+  reddit:
+    subreddits:
+      - yoga
+      - pilates
+      - cycling
+      - spinning
+      - orangetheory
+      - F45
+      - BarreWorkout
+      - Entrepreneur
+      - smallbusiness
+      - franchise
+
+  youtube:
+    queries:
+      - "boutique fitness franchise"
+      - "yoga studio franchise"
+      - "pilates franchise"
+      - "cycle studio franchise"
+      - "HIIT franchise opportunities"
+
+phrase_packs:
+  boutique_specific_high:
+    - phrase: "boutique fitness"
+      weight: 10
+    - phrase: "yoga franchise"
+      weight: 10
+    - phrase: "pilates franchise"
+      weight: 10
+    - phrase: "cycle studio franchise"
+      weight: 10
+    - phrase: "barre franchise"
+      weight: 10
+    - phrase: "rowing franchise"
+      weight: 9
+    - phrase: "Orange Theory"
+      weight: 9
+    - phrase: "F45"
+      weight: 9
+    - phrase: "Pure Barre"
+      weight: 9
+    - phrase: "Club Pilates"
+      weight: 9
+    - phrase: "CycleBar"
+      weight: 9
+    - phrase: "CorePower"
+      weight: 9
+
+scoring:
+  weights:
+    phrase_hits: 1.0
+    proximity_bonus: 0.3
+    boutique_specific: 0.4

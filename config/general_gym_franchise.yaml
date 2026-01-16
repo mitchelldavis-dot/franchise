@@ -1,0 +1,505 @@
+# General Gym & Fitness Franchise Configuration
+# Florida-First Lead Radar
+
+version: "1.0"
+name: "general_gym_franchise"
+description: "General configuration for gym and fitness franchise lead discovery"
+
+# Geography Settings
+geography:
+  florida_only_mode: true
+  florida_score_boost: 5
+  florida_lead_threshold: 50  # Min leads/week to stay Florida-only
+
+  florida_cities:
+    - Miami
+    - Tampa
+    - Orlando
+    - Jacksonville
+    - St. Petersburg
+    - Hialeah
+    - Tallahassee
+    - Fort Lauderdale
+    - Port St. Lucie
+    - Cape Coral
+    - Pembroke Pines
+    - Hollywood
+    - Miramar
+    - Coral Springs
+    - Clearwater
+    - West Palm Beach
+    - Lakeland
+    - Pompano Beach
+    - Davie
+    - Boca Raton
+    - Deltona
+    - Plantation
+    - Palm Bay
+    - Sunrise
+    - Largo
+
+  florida_counties:
+    - Miami-Dade
+    - Broward
+    - Palm Beach
+    - Hillsborough
+    - Orange
+    - Pinellas
+    - Duval
+    - Lee
+    - Polk
+    - Brevard
+    - Volusia
+    - Seminole
+    - Pasco
+    - Sarasota
+    - Manatee
+    - Leon
+    - Collier
+    - Escambia
+    - Lake
+    - St. Lucie
+
+# Sources Configuration
+sources:
+  enabled:
+    - reddit
+    - rss
+    - web_crawl
+    - youtube
+    - manual_import
+
+  reddit:
+    subreddits:
+      - Entrepreneur
+      - smallbusiness
+      - franchise
+      - franchising
+      - FitnessEntrepreneur
+      - GymOwners
+      - PersonalTraining
+      - crossfit
+      - yoga
+      - pilates
+      - martialarts
+      - Florida
+      - Miami
+      - Tampa
+      - Orlando
+      - Jacksonville
+
+  youtube:
+    queries:
+      - "buy gym franchise"
+      - "start fitness franchise"
+      - "gym franchise opportunities"
+      - "fitness studio franchise"
+      - "boutique fitness franchise"
+      - "gym marketing problems"
+      - "gym owner struggles"
+      - "fitness studio challenges"
+
+  rss:
+    feeds:
+      - url: "https://www.franchisegator.com/feed/"
+        name: "Franchise Gator"
+      - url: "https://www.entrepreneur.com/franchises/rss"
+        name: "Entrepreneur Franchises"
+
+  web_crawl:
+    seed_urls: []
+    max_pages_per_domain: 500
+    respect_robots: true
+    crawl_delay: 1.0
+
+# Phrase Packs
+phrase_packs:
+
+  # FRANCHISE BUYER - HIGH INTENT
+  franchise_buyer_high:
+    - phrase: "buy a franchise"
+      weight: 10
+      languages:
+        es: "comprar una franquicia"
+        pt: "comprar uma franquia"
+    - phrase: "franchise opportunities"
+      weight: 9
+      languages:
+        es: "oportunidades de franquicia"
+        pt: "oportunidades de franquia"
+    - phrase: "franchise for sale"
+      weight: 10
+    - phrase: "open a franchise"
+      weight: 9
+    - phrase: "start a franchise"
+      weight: 9
+    - phrase: "gym franchise"
+      weight: 10
+    - phrase: "fitness franchise"
+      weight: 10
+    - phrase: "studio franchise"
+      weight: 9
+    - phrase: "boutique fitness franchise"
+      weight: 10
+    - phrase: "how much does it cost"
+      weight: 8
+    - phrase: "franchise fee"
+      weight: 9
+    - phrase: "initial investment"
+      weight: 9
+    - phrase: "startup costs"
+      weight: 8
+    - phrase: "FDD"
+      weight: 10
+    - phrase: "franchise disclosure document"
+      weight: 10
+    - phrase: "Item 19"
+      weight: 10
+    - phrase: "earnings claim"
+      weight: 9
+    - phrase: "royalty"
+      weight: 7
+    - phrase: "marketing fee"
+      weight: 7
+    - phrase: "territory"
+      weight: 8
+    - phrase: "protected territory"
+      weight: 9
+    - phrase: "multi-unit"
+      weight: 9
+    - phrase: "area developer"
+      weight: 10
+    - phrase: "master franchise"
+      weight: 10
+    - phrase: "discovery day"
+      weight: 10
+    - phrase: "validation calls"
+      weight: 10
+    - phrase: "talk to franchisees"
+      weight: 9
+    - phrase: "franchise broker"
+      weight: 9
+    - phrase: "franchise consultant"
+      weight: 9
+    - phrase: "SBA loan"
+      weight: 9
+    - phrase: "franchise financing"
+      weight: 9
+    - phrase: "liquid capital"
+      weight: 8
+    - phrase: "net worth requirement"
+      weight: 8
+
+  # FRANCHISE BUYER - MEDIUM INTENT
+  franchise_buyer_medium:
+    - phrase: "looking to buy a business"
+      weight: 6
+    - phrase: "business ownership"
+      weight: 5
+    - phrase: "want to be my own boss"
+      weight: 6
+      languages:
+        es: "quiero ser mi propio jefe"
+        pt: "quero ser meu próprio chefe"
+    - phrase: "leaving corporate"
+      weight: 6
+    - phrase: "side hustle to full time"
+      weight: 6
+    - phrase: "semi-absentee"
+      weight: 7
+    - phrase: "absentee owner"
+      weight: 7
+    - phrase: "investment opportunity"
+      weight: 5
+    - phrase: "cash-flow business"
+      weight: 6
+    - phrase: "recurring revenue business"
+      weight: 6
+    - phrase: "what franchise should I buy"
+      weight: 7
+    - phrase: "best franchises under $200k"
+      weight: 8
+    - phrase: "best franchises under $300k"
+      weight: 8
+    - phrase: "best franchises under $500k"
+      weight: 8
+    - phrase: "low cost franchises"
+      weight: 7
+    - phrase: "home-based franchise"
+      weight: 6
+
+  # OWNER PAIN - HIGH INTENT
+  owner_pain_high:
+    - phrase: "my gym is struggling"
+      weight: 10
+      languages:
+        es: "mi gimnasio está luchando"
+        pt: "minha academia está lutando"
+    - phrase: "members keep cancelling"
+      weight: 9
+    - phrase: "churn is killing us"
+      weight: 10
+    - phrase: "we can't get leads"
+      weight: 9
+    - phrase: "lead flow dried up"
+      weight: 9
+    - phrase: "no show rate"
+      weight: 7
+    - phrase: "Facebook ads stopped working"
+      weight: 9
+    - phrase: "Google ads not working"
+      weight: 9
+    - phrase: "LSA not working"
+      weight: 8
+    - phrase: "my gym isn't growing"
+      weight: 9
+    - phrase: "stuck at"
+      weight: 7
+    - phrase: "plateau"
+      weight: 7
+    - phrase: "need help with marketing"
+      weight: 8
+      languages:
+        es: "necesito ayuda con marketing"
+        pt: "preciso de ajuda com marketing"
+    - phrase: "need help with sales"
+      weight: 8
+    - phrase: "need help with operations"
+      weight: 8
+    - phrase: "Classpass killing us"
+      weight: 9
+    - phrase: "Mindbody issues"
+      weight: 7
+    - phrase: "Glofox issues"
+      weight: 7
+    - phrase: "Zen Planner issues"
+      weight: 7
+    - phrase: "front desk problems"
+      weight: 7
+    - phrase: "coach retention"
+      weight: 8
+    - phrase: "schedule is a mess"
+      weight: 7
+    - phrase: "no systems"
+      weight: 8
+    - phrase: "reviews are bad"
+      weight: 8
+    - phrase: "Google Business Profile suspended"
+      weight: 9
+    - phrase: "SEO not working"
+      weight: 7
+
+  # OWNER PAIN - MEDIUM INTENT
+  owner_pain_medium:
+    - phrase: "how do I get more members"
+      weight: 6
+      languages:
+        es: "cómo consigo más miembros"
+        pt: "como consigo mais membros"
+    - phrase: "gym marketing ideas"
+      weight: 6
+    - phrase: "studio marketing"
+      weight: 6
+    - phrase: "what's a good offer"
+      weight: 5
+    - phrase: "intro offer not converting"
+      weight: 7
+    - phrase: "what CRM do gyms use"
+      weight: 5
+    - phrase: "what software for gym"
+      weight: 5
+    - phrase: "how to reduce churn"
+      weight: 7
+    - phrase: "how to increase retention"
+      weight: 7
+    - phrase: "pricing help"
+      weight: 5
+    - phrase: "class pack vs membership"
+      weight: 5
+    - phrase: "raise prices"
+      weight: 6
+    - phrase: "retention strategies"
+      weight: 6
+    - phrase: "member engagement"
+      weight: 5
+
+  # FITNESS VERTICAL TARGETS
+  fitness_verticals:
+    - phrase: "yoga studio"
+      weight: 5
+    - phrase: "pilates"
+      weight: 5
+    - phrase: "cycle studio"
+      weight: 5
+    - phrase: "HIIT"
+      weight: 5
+    - phrase: "bootcamp"
+      weight: 5
+    - phrase: "strength training"
+      weight: 4
+    - phrase: "martial arts"
+      weight: 5
+    - phrase: "boxing gym"
+      weight: 5
+    - phrase: "personal training studio"
+      weight: 6
+    - phrase: "small group training"
+      weight: 5
+    - phrase: "wellness"
+      weight: 4
+    - phrase: "recovery"
+      weight: 4
+    - phrase: "sauna"
+      weight: 4
+    - phrase: "cold plunge"
+      weight: 4
+    - phrase: "cryotherapy"
+      weight: 4
+    - phrase: "stretching"
+      weight: 4
+    - phrase: "crossfit"
+      weight: 5
+    - phrase: "gym"
+      weight: 3
+    - phrase: "fitness"
+      weight: 3
+    - phrase: "studio"
+      weight: 3
+
+  # BUDGET SIGNALS
+  budget_signals:
+    - phrase: "$100k"
+      weight: 5
+    - phrase: "$200k"
+      weight: 5
+    - phrase: "$300k"
+      weight: 5
+    - phrase: "$500k"
+      weight: 5
+    - phrase: "under $100k"
+      weight: 6
+    - phrase: "under $200k"
+      weight: 6
+    - phrase: "under $500k"
+      weight: 6
+    - phrase: "liquid capital"
+      weight: 7
+    - phrase: "cash to invest"
+      weight: 6
+    - phrase: "retirement savings"
+      weight: 5
+
+  # TIMELINE SIGNALS
+  timeline_signals:
+    - phrase: "this year"
+      weight: 8
+    - phrase: "next 6 months"
+      weight: 9
+    - phrase: "by end of year"
+      weight: 8
+    - phrase: "within 3 months"
+      weight: 9
+    - phrase: "asap"
+      weight: 9
+    - phrase: "urgently"
+      weight: 8
+    - phrase: "ready to start"
+      weight: 9
+    - phrase: "ready to move forward"
+      weight: 9
+
+  # OWNERSHIP INDICATORS (for Owner Pain leads)
+  ownership_indicators:
+    - phrase: "my gym"
+      weight: 10
+    - phrase: "our studio"
+      weight: 10
+    - phrase: "as an owner"
+      weight: 10
+    - phrase: "I own"
+      weight: 10
+    - phrase: "I run"
+      weight: 9
+    - phrase: "we own"
+      weight: 10
+    - phrase: "our business"
+      weight: 8
+    - phrase: "I opened"
+      weight: 9
+    - phrase: "we started"
+      weight: 9
+
+  # NEGATIVE / EXCLUSION PHRASES
+  negative_phrases:
+    - phrase: "NFL franchise"
+      penalty: -50
+    - phrase: "NBA franchise"
+      penalty: -50
+    - phrase: "NHL franchise"
+      penalty: -50
+    - phrase: "MLB franchise"
+      penalty: -50
+    - phrase: "sports franchise"
+      penalty: -30
+    - phrase: "franchise mode"
+      penalty: -40
+    - phrase: "franchise tag"
+      penalty: -40
+    - phrase: "video game"
+      penalty: -50
+    - phrase: "hiring"
+      penalty: -20
+    - phrase: "job opening"
+      penalty: -30
+    - phrase: "resume"
+      penalty: -30
+    - phrase: "looking for a job"
+      penalty: -40
+    - phrase: "career opportunity"
+      penalty: -25
+    - phrase: "how do I franchise my gym"
+      penalty: -30
+    - phrase: "sell my franchise"
+      penalty: -30
+    - phrase: "franchise my business"
+      penalty: -30
+
+# Scoring Configuration
+scoring:
+  weights:
+    phrase_hits: 1.0
+    proximity_bonus: 0.3
+    question_format: 0.2
+    first_person: 0.25
+    budget_signals: 0.15
+    timeline_signals: 0.2
+    location_signals: 0.15
+    source_weighting: 0.1
+    freshness_boost: 0.1
+    ownership_indicators: 0.3
+
+  thresholds:
+    buyer_researching: 40
+    buyer_comparing: 60
+    buyer_ready: 80
+    owner_mild_pain: 40
+    owner_serious_pain: 60
+    owner_urgent: 80
+
+  proximity_window: 10  # words
+
+  source_weights:
+    reddit: 1.0
+    youtube: 0.9
+    rss: 0.8
+    web_crawl: 0.7
+    manual_import: 1.0
+
+  freshness_decay_days: 30
+
+# Rate Limits (requests per minute)
+rate_limits:
+  reddit: 60
+  youtube: 100
+  web_crawl: 30
+  rss: 60

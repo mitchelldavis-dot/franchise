@@ -1,0 +1,67 @@
+# Wellness & Recovery Franchise Configuration
+# Specialized for recovery studios, cryotherapy, saunas, etc.
+
+version: "1.0"
+name: "wellness_recovery"
+description: "Configuration for wellness and recovery franchise leads"
+
+geography:
+  florida_only_mode: true
+  florida_score_boost: 5
+  florida_lead_threshold: 50
+
+sources:
+  enabled:
+    - reddit
+    - youtube
+
+  reddit:
+    subreddits:
+      - wellness
+      - recovery
+      - spa
+      - sauna
+      - biohacking
+      - Entrepreneur
+      - smallbusiness
+      - franchise
+
+  youtube:
+    queries:
+      - "wellness franchise"
+      - "recovery studio franchise"
+      - "cryotherapy franchise"
+      - "sauna business franchise"
+      - "wellness center franchise"
+
+phrase_packs:
+  wellness_verticals:
+    - phrase: "wellness center"
+      weight: 6
+    - phrase: "recovery studio"
+      weight: 6
+    - phrase: "cryotherapy"
+      weight: 6
+    - phrase: "sauna"
+      weight: 5
+    - phrase: "cold plunge"
+      weight: 5
+    - phrase: "infrared sauna"
+      weight: 5
+    - phrase: "float therapy"
+      weight: 5
+    - phrase: "IV therapy"
+      weight: 5
+    - phrase: "massage franchise"
+      weight: 6
+    - phrase: "stretching studio"
+      weight: 5
+    - phrase: "StretchLab"
+      weight: 6
+    - phrase: "Restore Hyper Wellness"
+      weight: 7
+
+scoring:
+  weights:
+    phrase_hits: 1.0
+    wellness_specific: 0.4

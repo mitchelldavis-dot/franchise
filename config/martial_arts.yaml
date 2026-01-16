@@ -1,0 +1,69 @@
+# Martial Arts Franchise Configuration
+# Specialized for martial arts, MMA, boxing studios
+
+version: "1.0"
+name: "martial_arts"
+description: "Configuration for martial arts franchise leads"
+
+geography:
+  florida_only_mode: true
+  florida_score_boost: 5
+  florida_lead_threshold: 50
+
+sources:
+  enabled:
+    - reddit
+    - rss
+    - youtube
+
+  reddit:
+    subreddits:
+      - martialarts
+      - MMA
+      - bjj
+      - judo
+      - karate
+      - taekwondo
+      - kickboxing
+      - boxing
+      - Entrepreneur
+      - smallbusiness
+      - franchise
+
+  youtube:
+    queries:
+      - "martial arts franchise"
+      - "BJJ gym franchise"
+      - "boxing gym franchise"
+      - "martial arts business"
+      - "martial arts school franchise"
+
+phrase_packs:
+  martial_arts_verticals:
+    - phrase: "martial arts"
+      weight: 6
+    - phrase: "BJJ"
+      weight: 6
+    - phrase: "brazilian jiu jitsu"
+      weight: 6
+    - phrase: "boxing gym"
+      weight: 6
+    - phrase: "kickboxing"
+      weight: 5
+    - phrase: "MMA gym"
+      weight: 6
+    - phrase: "karate"
+      weight: 5
+    - phrase: "taekwondo"
+      weight: 5
+    - phrase: "judo"
+      weight: 5
+    - phrase: "muay thai"
+      weight: 5
+    - phrase: "dojo"
+      weight: 6
+
+scoring:
+  weights:
+    phrase_hits: 1.0
+    martial_arts_specific: 0.4
