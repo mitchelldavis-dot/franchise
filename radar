@@ -1,0 +1,9 @@
+#!/bin/bash
+# Franchise Radar - Quick Start Script
+
+# Activate virtual environment and set PYTHONPATH
+source venv/bin/activate
+export PYTHONPATH="${PYTHONPATH}:$(pwd)/src"
+
+# Run command
+python -m franchise_radar "$@"
